@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+/* General styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px rgba(11, 10, 10, 0.15);
+    width: 100%;
+    max-width: 90vw; /* Fluid width */
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    margin: 0;
+    font-size: 2rem; /* Relative size */
+    font-weight: 600;
+    padding: 10px;
+}
+
+.section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    margin-top: 0;
+    color: black;
+    font-size: 1.8em;
+    text-align: center;
+    font-weight: 600;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+ul li strong {
+    color: black;
+}
+
+/* Styling for password generator and checker */
+.generator-buttons button, 
+.password-checker button,
+.button-group button {
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+    width: 100%; /* Make buttons full width for better responsiveness */
+}
+
+.generator-buttons button {
+    background-color: #007bff; /* Blue */
+}
+
+.generator-buttons button:hover {
+    background-color: #0056b3; /* Darker Blue */
+}
+
+.password-display input {
+    width: 100%; /* Fluid width */
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.button-group button {
+    width: 100%; /* Full width for buttons */
+}
+
+.button-group .clear {
+    background-color: #dc3545; /* Red */
+}
+
+.button-group .clear:hover {
+    background-color: #c82333; /* Darker Red */
+}
+
+.button-group .copy {
+    background-color: #28a745; /* Green */
+}
+
+.button-group .copy:hover {
+    background-color: #1e7e34; /* Darker Green */
+}
+
+.password-checker-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#user-password {
+    width: 100%; /* Fluid width */
+    padding: 12px;
+    font-size: 18px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #f9f9f9;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.password-checker button {
+    width: 100%; /* Full width for buttons */
+}
+
+.password-checker .clear {
+    background-color: #dc3545; /* Red */
+}
+
+.password-checker .check {
+    background-color: #28a745; /*  Green */
+}
+
+.password-checker .clear:hover {
+    background-color: #c82333; /* Darker Red */
+}
+
+.password-checker .check:hover {
+    background-color: #1e7e34; /* Darker Green */
+}
+
+#password-strength {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.weak {
+    color: #dc3545; /* Red */
+}
+
+.moderate {
+    color: #ffc107; /* Yellow */
+}
+
+.strong {
+    color: #28a745; /* Green */
+}
+
+/* Responsive Design */
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    h1 {
+        font-size: 1.8em;
+        padding: 5px;
+    }
+
+    .section {
+        padding: 10px;
+    }
+
+    .generator-buttons button, 
+    .password-checker button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .button-group button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .password-display input, 
+    #user-password {
+        font-size: 16px;
+    }
+}
+
+/* Small devices (phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .container {
+        max-width: 80vw;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .container {
+        max-width: 80vw;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .container {
+        max-width: 70vw;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 60vw;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}

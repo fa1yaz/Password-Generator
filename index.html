@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator and Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Password Generator</h1>
+
+        <div class="section password-display">
+            <h2></h2>
+            <div class="generator-buttons">
+                <button title="Basic alphanumeric password" onclick="generatePassword(1)">Algorithm 1</button>
+                <button title="Alphanumeric with symbols" onclick="generatePassword(2)">Algorithm 2</button>
+                <button title="Strong password with upper, lower, digits, and symbols" onclick="generatePassword(3)">Algorithm 3</button>
+                <button title="Password with a mix of everything and a specific length" onclick="generatePassword(4)">Algorithm 4</button>
+            </div>
+            <input type="text" id="generated-password" readonly>
+            <div class="button-group">
+                <button class="copy" onclick="copyToClipboard()">Copy</button>
+                <button class="clear" onclick="clearGeneratedPassword()">Clear</button>   
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Why Strong Passwords Are Necessary</h2>
+            <ul>
+                <li>🔐 <strong>Protect Personal Information:</strong> Strong passwords safeguard your personal data from unauthorized access.</li>
+                <li>💳 <strong>Prevent Identity Theft:</strong> A strong password reduces the risk of identity theft and fraudulent activities.</li>
+                <li>🛡️ <strong>Secure Sensitive Accounts:</strong> Accounts such as email, bank accounts, and social media require strong passwords to protect against hacking.</li>
+                <li>🚫 <strong>Avoid Unauthorized Access:</strong> Strong passwords make it harder for hackers to gain unauthorized access to your accounts.</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Attacks on Weak Passwords</h2>
+            <ul>
+                <li>🔍 <strong>Brute Force Attacks:</strong> Attackers use automated tools to guess passwords by trying all possible combinations.</li>
+                <li>📜 <strong>Dictionary Attacks:</strong> Attackers use a list of common passwords and phrases to guess passwords.</li>
+                <li>🔄 <strong>Credential Stuffing:</strong> Attackers use leaked password data from other breaches to attempt login on multiple sites.</li>
+                <li>👥 <strong>Social Engineering:</strong> Attackers manipulate individuals into revealing their passwords through deceptive practices.</li>
+            </ul>
+        </div>
+
+        <div class="section password-checker">
+            <h2>Password Strength Checker</h2>
+            <div class="password-checker-input">
+                <input type="text" id="user-password" placeholder="Enter your password">
+                <button class="check" onclick="checkPasswordStrength()">Check Strength</button>
+                <button class="clear" onclick="clearPassword()">Clear</button>
+            </div>
+            <div id="password-strength">Password Strength: </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
