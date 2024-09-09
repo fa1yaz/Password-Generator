@@ -102,7 +102,7 @@ function copyToClipboard() {
     const passwordField = document.getElementById('generated-password');
     passwordField.select();
     document.execCommand('copy');
-    alert('Password copied to clipboard!');
+    // alert('Password copied to clipboard!');
 }
 
 // Function to check password strength
